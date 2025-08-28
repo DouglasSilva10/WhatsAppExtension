@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Ganho/Perdido/Tag",
+  "version": "1.0",
+  "description": "Adiciona botões para marcar conversas como 'Ganho', 'Perdido' ou 'Tag' no WhatsApp Web.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
